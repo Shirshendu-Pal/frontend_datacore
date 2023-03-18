@@ -38,6 +38,10 @@ export const Login = (props) => {
     }
   };
 
+  const forgetPassword = async () =>{
+    
+  }
+
   return (
     <div className="auth-form-container">
       <h2>Login</h2>
@@ -60,8 +64,11 @@ export const Login = (props) => {
         />
         <button type="submit" onClick={handleSubmit}>Log In</button>
       </div>
-      <button className="link-btn" onClick={() => navigate('register')}>
+      <button className="link-btn" onClick={() => navigate('/register')}>
         Don't have an account? Register here.
+      </button>
+      <button className="link-btn" onClick={() => forgetPassword()}>
+        Forgot Password!??
       </button>
     </div>
   );

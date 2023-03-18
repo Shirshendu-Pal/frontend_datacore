@@ -5,10 +5,14 @@ import * as api from "./api/api"
 
 function Student() {
     const userId = localStorage.getItem('userId');
+    const token = localStorage.getItem('security_token');
     const [tokenStatus, setTokenStatus] = useState(false);
     const navigate = useNavigate();
     const [userType, setUserType] = useState("")
     const checkUser = async () =>{
+        if(!token){
+            navigate("/")
+          }
       let sendData = {
         userId: userId,
       }
