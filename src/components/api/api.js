@@ -8,3 +8,5 @@ export const userRegister = (data) => API.post("/register", data);
 export const userLogin = (data) => API.post("/login", data);
 export const mailVerification = (data) => API.post("/verify", data);
 export const checkUserType = (data) => API.post("/userType", data);
+export const forgetPassword = (data) => API.post("/forget-password", data);
+export const resetPassword = (data) => API.post("/resetPassword", data);
